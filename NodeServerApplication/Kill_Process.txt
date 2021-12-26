@@ -1,0 +1,5 @@
+--Steps to kill the process if anything is running on the mentioned port--
+netstat -aon | findstr "3000"
+taskkill /pid 5092 /f 
+--Note 5092 represents the PID of the port number--
+
