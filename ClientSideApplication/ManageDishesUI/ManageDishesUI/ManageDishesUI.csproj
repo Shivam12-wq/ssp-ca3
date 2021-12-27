@@ -70,6 +70,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Default.html" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\ManageDishes.js" />
     <Content Include="Web.config" />
   </ItemGroup>

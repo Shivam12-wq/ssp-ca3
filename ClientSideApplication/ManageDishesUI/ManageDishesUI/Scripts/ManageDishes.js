@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     dishesList();
 
+    // On clicking delete button in each row, we call the API with delete HTTP type. 
     $("#dishesTable").on('click', 'input[id="deleteRow"]', function (event) {
         $.ajax({
             url: 'http://localhost:3000/dishes/' + $(this).data('id'),
@@ -15,6 +16,7 @@
         });
     });
 
+    // On clicking the add button, submit the values to the POST method with the form values
     $('#addButton').on('click', function (event) {
         // Build Dish object from inputs
         Dish = new Object();
@@ -38,8 +40,8 @@
     });
 });
 
+// Call Web API to get a list of Dishes
 function dishesList() {
-    // Call Web API to get a list of Dishes
     $.ajax({
         url: 'http://localhost:3000/dishes/',
         type: 'GET',
@@ -53,10 +55,11 @@ function dishesList() {
     });
 }
 
+// Function to add the list of dish records in the UI HTML table
 function populateHTMLTable(dishes) {
     $("#dishesTable tbody").empty();
     $.each(dishes, function (index, dish) {
-        // Add a row to the Dishes table
+        // Add a row to the Dishes table with the delete button for all the records
         var record =
             "<tr>" +
             "<td>" + dish.id + "</td>" +
@@ -65,7 +68,7 @@ function populateHTMLTable(dishes) {
             + "<td>" + dish.price + "</td>" +
             "<td><input type='button' value='Delete' id='deleteRow' data-id='" + dish.id + "'/></td>"
         "</tr>";
-
+        // Code reffered: https://www.w3schools.com/jquery/html_append.asp
         $("#dishesTable tbody").append(record);
     });
 }
