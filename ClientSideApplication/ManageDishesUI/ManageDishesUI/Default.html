@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ;>
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/ManageDishes.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Manage Dishes Page - Listing</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <table id="dishesTable"
+                       class="table table-bordered
+                  table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Dish ID</th>
+                            <th>Dish Type</th>
+                            <th>Dish Name</th>
+                            <th>Price</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button"
+                        id="addButton"
+                        class="btn btn-primary">
+                    Add New Dish
+                </button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dishId">Dish ID</label>
+            <input type="text" id="dishId" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="dishType">Dish Type</label>
+            <select id="dishType" class="form-control">
+                <option value="Cake">Cake</option>
+                <option value="Doughnut">Doughnut</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dishName">Dish Name</label>
+            <input type="text" id="dishName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" class="form-control" />
+        </div>
+    </div>
+</body>
+</html>
